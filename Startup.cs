@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MediatR;
+using System.Reflection;
 
 namespace NasaApiApp
 {
@@ -28,6 +30,9 @@ namespace NasaApiApp
         {
 
             services.AddControllers();
+            services.AddHttpClient();
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+           
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NasaApiApp", Version = "v1" });
@@ -49,6 +54,8 @@ namespace NasaApiApp
             app.UseRouting();
 
             app.UseAuthorization();
+
+           // app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

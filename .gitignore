@@ -3,3 +3,6 @@
 ################################################################################
 
 /obj
+/bin/Debug/net5.0
+/.vs/NasaApiApp/DesignTimeBuild/.dtbcache.v2
+/.vs/NasaApiApp/v16
