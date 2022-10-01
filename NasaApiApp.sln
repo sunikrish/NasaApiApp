@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaApiApp", "NasaApiApp.csproj", "{A0FDF4A9-F15D-4404-B8B9-BF072397E2C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaApiApp.UnitTest", "..\NasaApiApp.UnitTest\NasaApiApp.UnitTest.csproj", "{03CCA6DF-4FFB-4614-9808-045A1D9F4592}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaApiApp.UnitTest", "..\NasaApiApp.UnitTest\NasaApiApp.UnitTest.csproj", "{03CCA6DF-4FFB-4614-9808-045A1D9F4592}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaApiApp.Test", "..\NasaApiApp.Test\NasaApiApp.Test.csproj", "{0751952D-5FA3-47E2-BAA4-37ECEFCA60A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaApiApp.Test", "..\NasaApiApp.Test\NasaApiApp.Test.csproj", "{0751952D-5FA3-47E2-BAA4-37ECEFCA60A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaApi.Application", "..\NasaApi.Application\NasaApi.Application.csproj", "{79AA252D-9CFC-49FA-973A-8F25E65C10EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0751952D-5FA3-47E2-BAA4-37ECEFCA60A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0751952D-5FA3-47E2-BAA4-37ECEFCA60A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0751952D-5FA3-47E2-BAA4-37ECEFCA60A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79AA252D-9CFC-49FA-973A-8F25E65C10EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AA252D-9CFC-49FA-973A-8F25E65C10EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AA252D-9CFC-49FA-973A-8F25E65C10EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AA252D-9CFC-49FA-973A-8F25E65C10EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

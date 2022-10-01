@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MediatR;
 using System.Reflection;
+using NasaApi.Application;
 
 namespace NasaApiApp
 {
@@ -28,11 +29,20 @@ namespace NasaApiApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("https://localhost:44351", "http://localhost:4200")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                    });
+            });
             services.AddControllers();
             services.AddHttpClient();
             services.AddMediatR(Assembly.GetExecutingAssembly());
-           
+            services.AddApplicationService();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NasaApiApp", Version = "v1" });
@@ -52,7 +62,7 @@ namespace NasaApiApp
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors();
             app.UseAuthorization();
 
            // app.UseMiddleware<ExceptionMiddleware>();
